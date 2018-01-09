@@ -3,7 +3,7 @@ import wave
 import sys
 
 if (len(sys.argv) < 2):
-    print("Agument failure")
+    print("No file to play")
     sys.exit(-1)
 
 wa = wave.open(sys.argv[1], 'rb')
