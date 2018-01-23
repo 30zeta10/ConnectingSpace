@@ -1,0 +1,6 @@
+Python Skripte zur Übertragung von Daten zwischen subscriber und broker, sowie publisher und broker
+
+Benötigte Python Libs:
+
+paho-mqtt [pip install paho-mqtt]
+
