@@ -7,18 +7,18 @@ host = "m23.cloudmqtt.com"
 port = 16533
 
 def on_message(client, obj, msg):
-    print(msg.topic + " " + str(msg.qos) + " " + str(msg.payload))
+    print("Write")
+    f = open('newpic.jpg', 'wb')
+    f.write(msg.payload)
+    f.close()
 
 mqttc = mqtt.Client()
-
 mqttc.on_message = on_message
-
 mqttc.username_pw_set(user, pw)
 mqttc.connect(host, port)
 
 mqttc.subscribe(topic, 0)
 
-mqttc.loop_stop()
 rc = 0
 
 while rc == 0:
