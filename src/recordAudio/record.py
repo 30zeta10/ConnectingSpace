@@ -5,7 +5,7 @@ def recordAudio():
 
     audio_rate = 44100
     audio_piece = 1024
-    audio_recordedTime = 5
+    audio_recordedTime = 10
 
     pl = pyaudio.PyAudio()
 
