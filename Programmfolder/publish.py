@@ -2,8 +2,9 @@ import paho.mqtt.client as mqtt
 import wave
 import audioop
 
-def publishMqtt(topic, message):
+def publishMqtt(message):
     
+    topic = '/voice/'
     user = "pdqmkvuw"
     pw = "G4CeJE2Qs-rh"
     host = "m23.cloudmqtt.com"

@@ -26,10 +26,9 @@ def recordAudio():
     stream.close()
     pl.terminate()
 
-    wa = wave.open("output.wav", 'wb')
+    wa = wave.open("voice.wav", 'wb')
     wa.setnchannels(2)
     wa.setsampwidth(pl.get_sample_size(pyaudio.paInt16))
     wa.setframerate(audio_rate)
     wa.writeframes(b''.join(frames))
     wa.close()
-    return wa

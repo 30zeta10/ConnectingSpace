@@ -2,9 +2,9 @@ import pyaudio
 import wave
 import sys
 
-def playAudio(path):
+def playAudio():
 
-    wa = wave.open(path, 'rb')
+    wa = wave.open('./voice.wav', 'r')
     play = pyaudio.PyAudio()
 
     stream = play.open(format = play.get_format_from_width(wa.getsampwidth()),
