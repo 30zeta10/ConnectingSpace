@@ -5,10 +5,11 @@ user = "pdqmkvuw"
 pw = "G4CeJE2Qs-rh"
 host = "m23.cloudmqtt.com"
 port = 16533
+string = None 
 
 def on_message(client, obj, msg):
     print("Write")
-    f = open('newpic.jpg', 'wb')
+    f = open('new.wav', 'wb')
     f.write(msg.payload)
     f.close()
 
@@ -21,6 +22,7 @@ mqttc.subscribe(topic, 0)
 
 rc = 0
 
+
 while rc == 0:
-    rc = mqttc.loop()
+   rc = mqttc.loop()
 print("rc: " + str(rc))
