@@ -3,10 +3,13 @@ import wave
 import audioop
 
 def publishMqtt(message):
-    
+
+    usF = open("/home/zeta/Dokumente/secrets/user", "r")
+    pwF = open("/home/zeta/Dokumente/secrets/pw", "r")
+
+    user = usF.read().rstrip()
+    pw = pwF.read().rstrip()
     topic = '/voice/'
-    user = "pdqmkvuw"
-    pw = "G4CeJE2Qs-rh"
     host = "m23.cloudmqtt.com"
     port = 16533
 

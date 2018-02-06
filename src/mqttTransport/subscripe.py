@@ -1,7 +1,10 @@
 import paho.mqtt.client as mqtt
 
-user = "pdqmkvuw"
-pw = "G4CeJE2Qs-rh"
+usF = open("/home/zeta/Dokumente/secrets/user", "r")
+pwF = open("/home/zeta/Dokumente/secrets/pw", "r")
+
+user = usF.read().rstrip()
+pw = pwF.read().rstrip()
 host = "m23.cloudmqtt.com"
 port = 16533
 checkmsg = None 
